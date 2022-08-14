@@ -17,3 +17,23 @@ for(i = 1; i < 11; i++){
 }
 
 alert('1から10まで足し算した結果は' + num2 + 'です');
+
+let result = '';
+let i2 = 0;
+
+do{
+  i2 = i2 + 1;
+  result = result + i2;
+}while(i2 < 10);
+alert(result)
+
+
+
+
+
+// 確認問題
+
+alert(5 + 5);
+alert(10 - 5);
+alert(5 * 5);
+alert(25 / 5);
