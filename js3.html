@@ -9,6 +9,82 @@
   <body>
 
     <script src="js3.js"></script>
+    <h3>console.logはデベロッパーツールのコンソールに表示される</h3>
+
+    <h3>再宣言…同じ変数(今回ではnickname)で宣言できるのはvarのみ</h3>
+
+    <p>var nickname = "taro"<br>
+      console.log(nickname)<br>
+      var nickname = "ichiro"<br>
+      console.log(nickname)</p>
+  
+      <p>let nickname = "taro"<br>
+      console.log(nickname)<br>
+      let nickname = "ichiro"<br>
+      console.log(nickname)</p>
+
+      <p>const nickname = "taro"<br>
+      console.log(nickname)<br>
+      const nickname = "ichiro"<br>
+      onsole.log(nickname)
+      </p>
+      <p>.jsファイルに上記を記述しても、letとconstはコンソールでエラーが出る</p>
+
+      <h3>再代入…同じ変数に別の値を再代入できるのはvarとletのみ</h3>
+    
+      <p>var nickname = "taro"<br>
+        console.log(nickname)<br>
+        ickname = "jiro"<br>
+        console.log(nickname)</p>
+
+      <p>let nickname = "taro"<br>
+        console.log(nickname)<br>
+        nickname = "jiro"<br>
+        console.log(nickname)</p>
+
+      <p>const nickname = "taro"<br>
+        console.log(nickname)<br>
+        nickname = "jiro"<br>
+        console.log(nickname)</p>
+
+      <p>上記はコンソールでconstだけエラーが出る</p>
+
+    <p>var str = "webcamp"<br>
+      function foo() {<br>
+        console.log(str)<br>
+        var str = "dmm webcamp"<br>
+        console.log(str)<br>
+      }<br>
+      foo()</p>
+    <p>コンソールで実際に確認してみると、undefinedとdmm webcampと表示される。<br>
+      本来ならばwebcampとdmm webcampと表示してほしい。<br>
+      上記は、<br>
+      var str = "webcamp"<br>
+      function foo() { <br>
+        var str<br>
+        console.log(str)<br>
+        str = "dmm webcamp"<br>
+        console.log(str)<br>
+      }<br>
+      foo()<br>
+      と再代入しているのと同じ表記である。console.log(str)が関数内に記入されているから。<br>
+      undefinedはvarの初期設定。</p>
+
+      <h2>関数</h2>
+      <p>「関数（function）」は、繰り返し使われる一連の処理を1つにまとめたもの<br>
+        最も簡単な関数は以下のように記述<br>
+        function 関数名(){<br>
+          処理内容<br>
+        }</p>
+
+        <h3>「引数」と「戻り値」</h3>
+        <p>入力する値を「引数（ひきすう）」、出力される値を「戻り値（もどりち）」<br>
+          引数、戻り値は以下のように書く</p>
+        <p>  function 関数名(引数){<br>
+          処理<br>
+          return 戻り値;<br>
+        }</p>
+
     
   </body>
 
